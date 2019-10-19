@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import Radium,{StyleRoot} from 'radium';
 
 class App extends Component {
   state = {
@@ -39,7 +38,6 @@ class App extends Component {
     let persons = null;
     if(this.state.showPersons){
       persons = (
-        <StyleRoot>
           <div>
             {
               this.state.persons.map((person,index) => {
@@ -47,7 +45,6 @@ class App extends Component {
               })
             }
           </div>
-        </StyleRoot>
         )
       }
 
@@ -61,4 +58,4 @@ class App extends Component {
   }
 }
 
-export default Radium(App);
+export default App;
